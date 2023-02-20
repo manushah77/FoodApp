@@ -399,6 +399,14 @@ class _HomePageState extends State<HomePage> {
                 height: 10,
               ),
               _buildFreshVeg(context),
+              SizedBox(
+                height: 10,
+              ),
+              _buildFreshFruit(context),
+              SizedBox(
+                height: 10,
+              ),
+              _buildFreshVeg(context),
             ],
           ),
         ),
@@ -574,15 +582,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-// productProvider.appleproductlist
-//     .map((e) {
-// return SingleProduct(
-// productImage:
-// '',
-// productName: '',
-// ontap: () {
-// // Navigator.push(context, MaterialPageRoute(builder: (context)=>ProductOverview(),),);
-// },
-// );
-// })
-// .toList(),

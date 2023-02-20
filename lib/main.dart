@@ -32,21 +32,21 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<UserProvider>(
           create: (context) => UserProvider(),
         ),
-        ChangeNotifierProvider<ReviewCartProvider> (
+        ChangeNotifierProvider<ReviewCartProvider>(
           create: (context) => ReviewCartProvider(),
         ),
-        ChangeNotifierProvider<WishListProvider> (
+        ChangeNotifierProvider<WishListProvider>(
           create: (context) => WishListProvider(),
         ),
-        ChangeNotifierProvider<CheckOutProvider> (
+        ChangeNotifierProvider<CheckOutProvider>(
           create: (context) => CheckOutProvider(),
         ),
       ],
       child: MaterialApp(
         theme: ThemeData(
           colorScheme: ThemeData().colorScheme.copyWith(
-            primary: primaryColor,
-          ),
+                primary: primaryColor,
+              ),
           primaryColor: primaryColor,
           scaffoldBackgroundColor: Colors.white,
         ),

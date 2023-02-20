@@ -10,6 +10,7 @@ class UserProvider with ChangeNotifier {
     String? userEmail,
     String? userImage,
     String? userId,
+    String? userPhone,
   }) async {
     await FirebaseFirestore.instance
         .collection('userData')
@@ -19,6 +20,7 @@ class UserProvider with ChangeNotifier {
       'userEmail': userEmail,
       'userImage': userImage,
       'userId': currentUser.uid,
+      'userPhone' : userPhone,
     });
   }
 
@@ -38,6 +40,7 @@ class UserProvider with ChangeNotifier {
         userImage: value.get('userImage'),
         userEmail: value.get('userEmail'),
         userUid: value.get('userId'),
+        userPhone: value.get('userPhone'),
       );
       currentData = userModel;
       notifyListeners();
